@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 1px solid #996bc7;
+            padding: 1em 2em 1em 1em;
+            margin: 1em;
+        }
+
+        input {
+            width: 97%;
+            padding: 4px;
+            margin: 10px;
+        }
+
+        select {
+            width: 95%;
+            padding: 4px;
+            margin: 10px 10px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="container">
+        <form>
+            First Name<br />
+            <input type="text" name="firstName" placeholder="John" /><br />
+            Last Name<br />
+            <input type="text" name="lastName" placeholder="Johnson" /><br />
+            Date of Birth
+            <input type="date" name="birthDate" value="2017-11-16" /><br />
+            Gender<br />
+            <select name="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="others">others</option>
+            </select>
+            Email<br />
+            <input type="email" name="email" placeholder="j.johnson@gmail.com" /><br />
+            Homepage<br />
+            <input type="url" name="homePage" placeholder="www.johnjohnsons.net" /><br />
+            Favorite Color<br />
+            <input type="color" name="color" value="#996bc7"/><br />
+            <button>Save</button>
+        </form>
+    </div>
+</body>
+</html>
