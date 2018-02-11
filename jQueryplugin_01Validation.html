@@ -17,7 +17,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="LastName">Last Name</label>
@@ -87,6 +87,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
 
+    <script>
+        jQuery.validator.setDefaults({
+            debug: true,
+            success: "valid"
+        });
+
+        $("#registration").validate({
+            rules: {
+                firstName: {
+                    required: true,
+                    minlength: 2
+                },
+                lastName: {
+                    required: true,
+                    minlength: 2
+                }
+            },
+            messages: {
+                firstName: {
+                    required: "Please enter your name",
+                    minlength: jQuery.validator.format("Please lengthen this text to 2 characters or more!")
+                },
+                lastName: {
+                    required: "Please enter your last name",
+                    minlength: jQuery.validator.format("Please lengthen this text to 2 characters or more!")
+                }
+            }
+        });
+
+    </script>
 
   </body>
 </html>
