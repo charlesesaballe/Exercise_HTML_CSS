@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Using jquery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 1em 2em 1em 1em;
+            margin: 1em;
+        }
+
+         .button {
+            width: 20px;
+            height: 20px;
+            background-color: dimgray;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <p class="first">This is the first paragraph. It contains interesting information.</p>
+        <p class="second">This is the second paragraph. It also contains other interesting information.</p>
+            
+        <button type="button" class="btn btn-primary" id="toggles">Toggle Chapter 1</button>
+        <button type="button" class="btn btn-primary" id="fades">Fade out both</button>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $("#toggles").click(function () {
+                $("p:first").toggle();
+            });
+            $("#fades").click(function () {
+                $("p").fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>
